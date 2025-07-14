@@ -1,12 +1,22 @@
-// Creating divs using JS
-const container = document.getElementById('container');
+const mainArt = document.querySelector("#canvas");
 
-// Create a grid function
-function makeDivs(numDivs) {
-    for (let x = 0; x < numDivs; x++) {
-        let cells = document.createElement('div');
-        container.appendChild(cells);
+// Find a way to repeat these into a grid
+function createGrid(gridSize) {
+
+    // Create a loop that runs from 0 to the gridSize
+    for (let i = 0; i < (gridSize * gridSize); i++) {
+
+        // Create the grid squares div
+        let squares = document.createElement('div');
+        squares.className = 'square-div';
+        
+        let size = 500 / gridSize;
+
+        // Fits the width and height within the boundaries
+        squares.style.width = `${size}px`;
+        squares.style.height = `${size}px`;
+        mainArt.appendChild(squares);
     }
 }
 
-makeDivs(16);
+createGrid(16);
