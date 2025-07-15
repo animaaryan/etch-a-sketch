@@ -1,20 +1,6 @@
-.heading-title {
+#outer-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#canvas {
-    display: flex;
-    flex-wrap: wrap;
-    border: 2px solid black;
     width: 500px;
     height: 500px;
-}
-
-.square-div {
-    display: flex;
-    border: 0.5px solid rgb(0, 0, 0);
-    box-sizing: border-box;
-    margin: 0;
+    border: 2px solid black;
 }

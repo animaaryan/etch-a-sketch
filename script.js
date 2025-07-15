@@ -1,22 +1,31 @@
-const mainArt = document.querySelector("#canvas");
+// Get reference to the container class
+const INNER_SQUARE = document.getElementById("outer-container");
 
-// Find a way to repeat these into a grid
-function createGrid(gridSize) {
+function makeGrid() {
 
-    // Create a loop that runs from 0 to the gridSize
-    for (let i = 0; i < (gridSize * gridSize); i++) {
+    // Call a for loop that loops 16 times
+    for (let i = 0; i < 16; i++) {
 
-        // Create the grid squares div
-        let squares = document.createElement('div');
-        squares.className = 'square-div';
-        
-        let size = 500 / gridSize;
+        var number = document.createTextNode(i);
 
-        // Fits the width and height within the boundaries
-        squares.style.width = `${size}px`;
-        squares.style.height = `${size}px`;
-        mainArt.appendChild(squares);
+        // Create a div for the rows
+        var GRID_ROWS = document.createElement('div');
+        GRID_ROWS.className = "main-grid";
+
+        GRID_ROWS.appendChild(number);
+
+        // Adding a lil style to it
+        GRID_ROWS.style.display = "flex";
+        GRID_ROWS.style.flexDirection = "column";
+        GRID_ROWS.style.height = "50px";
+        GRID_ROWS.style.width = "120px";
+        GRID_ROWS.style.border = "1px solid black";
+        GRID_ROWS.style.alignItems = "center";
+
+        // Slap the grid inside the cute box
+        INNER_SQUARE.appendChild(GRID_ROWS);
     }
 }
 
-createGrid(16);
+makeGrid();
+
