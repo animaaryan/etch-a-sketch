@@ -1,4 +1,8 @@
-h1 {
+* {
+    box-sizing: border-box;
+}
+
+.main-title {
     display: flex;
     font-weight: bolder;
     font-style: oblique;
@@ -34,13 +38,58 @@ h1 {
 .inner-container>div {
     height: auto;
     flex: 1 0 auto;
-
-    /* make columns vertical flexboxes */
     display: flex;
     flex-direction: column;
 }
 
 .inner-container>div>* {
-    /* make rows evenly distributed */
     flex: 1;
+}
+
+.magic-color {
+    background-color: black;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.btn-size {
+    display: inline-block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    background: #000000;
+    color: ghostwhite;
+}
+
+.btn-reset {
+    display: inline-block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.9rem 2rem;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    position: relative;
+    letter-spacing: 0.05rem;
+    font-weight: 700;
+    font-size: 17px;
+    border-radius: 500px;
+    background: lightskyblue;
+    color: rgb(27, 27, 121);
 }
