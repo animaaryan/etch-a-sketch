@@ -148,8 +148,8 @@ function onEraseClick() {
             shadingMode = false;
             document.querySelector(".btn-shading").textContent = "Shading: OFF";
         }
-        
-        ERASE_BUTTON.textContent = shadingMode ? "Eraser: ON" : "Eraser: OFF";
+
+        ERASE_BUTTON.textContent = eraserMode ? "Eraser: ON" : "Eraser: OFF";
         console.log("Erasing mode:", eraserMode);
     });
 }
